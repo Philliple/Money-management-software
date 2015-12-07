@@ -5,4 +5,4 @@ Just a software that is an ongoing project, but baically it's a software that ma
 
 [If you only want the code file than you should just download the file named Bankapp.sln]
 
-[Disclaimer: This application is still under development so a compiler is needed to run it in console32.There are no finalized stable version produced yet.]
+[Disclaimer: This application is still under development so a compiler is needed to run it in console32.There are no finalized stable version produced yet. Thus, there is no support for this application.]
