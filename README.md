@@ -3,6 +3,6 @@ Just a software that is an ongoing project, but baically it's a software that ma
 
 [This code is in C++ and was made using visual studio as a compiler.]
 
-[If you only want the code file than you should just download the file named Bankapp.sln]
+[If you only want the code file than you should just download the file named Bankapp.sln, but i do recommend just downloading everything since it's so small in disk space that there really is no harm.]
 
 [Disclaimer: This application is still under development so a compiler is needed to run it in console32.There are no finalized stable version produced yet. Thus, there is no support for this application.]
