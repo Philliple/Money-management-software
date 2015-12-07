@@ -1,4 +1,6 @@
-# Money-management-software [Ongoing project Bankapp]
-This is a small software that is still a work in progress, but baically it's a software that manages the amount of money you have at one time so you don't have to be counting it all the time.
-[this code is in C++ and a visual studio extension file]
-[if you only want to code file than you should just down the file named consoleapplication6.sln ]
+# Money-Management-Software [MMS Bankapp]
+Just a software that is an ongoing project, but baically it's a software that manages the amount of money you have at one time and the value in physical bills present. So you don't have to be counting it everytime you want to know how much you have in cash.
+
+[This code is in C++ and was made using visual studio as a compiler.]
+[If you only want to code file than you should just down the file named Bankapp.sln]
+[Disclaimer: This application is still under development so a compiler is needed to run it in console32.There are no finalized stable version produced yet.]
