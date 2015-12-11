@@ -115,7 +115,7 @@ int main()
 	myfile1.close();
 
 
-	if (username.length() < 4)
+	if (username.length() < 0)
 	{
 		cout << "Invalid Username\n";
 		exit(0);
@@ -130,7 +130,7 @@ int main()
 		myfile << password << endl;
 		myfile.close();
 
-		if (password.length() < 6)
+		if (password.length() < 0)
 		{
 			cout << "Invalid Password\n";
 			exit(0);
