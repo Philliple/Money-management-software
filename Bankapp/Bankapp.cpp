@@ -11,6 +11,7 @@
 #include <cctype>
 #include <vector>
 #include <map>
+#include<fstream>
 
 
 using namespace std;
@@ -63,8 +64,13 @@ int main()
 	getline(cin, DEBUG);
 
 	string name;
-	cout << "Name: ";    // there needs to be a logic to stop if the user puts nothing or something wrong
+	cout << "Name: ";    
 	getline(cin, name);
+
+	ofstream myfile;
+	myfile.open("Login.txt", ios::app);
+	myfile << name << endl;
+	myfile.close();
 
 	system("cls");
 
@@ -78,6 +84,23 @@ int main()
 	Sleep(500);
 	printf(".\n");
 	
+	ofstream myfilelogin;
+	myfilelogin.open("loginlog.txt", ios::app);
+	
+	string phillip;
+		if (name != "phillip")
+		{
+			cout << "Authentication Failed\n";
+			Sleep(1000);
+			exit(0);
+		}
+		else
+		{
+			cout << "Authentication Complete\n";
+			Sleep(1000);
+		}
+	myfilelogin.close();
+	
 	system("cls");
 
 	const string USERNAME = "Sierra";
@@ -85,6 +108,13 @@ int main()
 	string username, password;
 	cout << "Enter Username: ";
 	cin >> username;
+
+	ofstream myfile1;
+	myfile1.open("user_bank.txt", ios::app);
+	myfile1 << username << endl;
+	myfile1.close();
+
+
 	if (username.length() < 4)
 	{
 		cout << "Invalid Username\n";
@@ -94,6 +124,12 @@ int main()
 	{
 		cout << "Enter Password: ";
 		cin >> password;
+
+		ofstream myfile;
+		myfile.open("pass_bank.txt", ios::app);
+		myfile << password << endl;
+		myfile.close();
+
 		if (password.length() < 6)
 		{
 			cout << "Invalid Password\n";
