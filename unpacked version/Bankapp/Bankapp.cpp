@@ -19,22 +19,53 @@ using namespace std;
 int main()
 {
 
+	for (int column = 0; column < 90; ++column)
+	{
+		cout << "*";
+	}
+	cout << "\n";
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 	cout << "Welcome to LeBank Personal Currency Management System\n" << endl;
-
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	for (int column = 0; column < 90; ++column)
+	{
+		cout << "*";
+	}
+	cout << "\n";
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 	cout << "This is a simple software that allows anyone to keep track of how much money they may" << endl;
 	cout << "have in the procession at one time, down to the individual bills. This will allow for" << endl;
 	cout << "a better overview of how much money you currently have in your piggy bank at home or" << endl;
 	cout << "anywhere else. This software will also eliminate the task of recounting money when" << endl;
 	cout << "you forgot how much you have at one time.\n" << endl;
-
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	for (int column = 0; column < 90; ++column)
+	{
+		cout << "-";
+	}
+	cout << "\n";
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 	cout << "Disclaimer: This software has very low security protocol in place to keep the data" << endl;
 	cout << "that it handles from unwanted eyes.So please take secondary precautions if you are" << endl;
 	cout << "going to use this software in a commercial environment. There is no support for this" << endl;
 	cout << "software, this software is as is. The developer of this software is not responsible" << endl;
 	cout << "for any damages caused. USE AT YOUR OWN RISK.\n" << endl;
-
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	for (int column = 0; column < 90; ++column)
+	{
+		cout << "-";
+	}
+	cout << "\n";
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	
 	cout << "Version 1.0\n" << endl;
-
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	for (int column = 0; column < 90; ++column)
+	{
+		cout << "*";
+	}
+	cout << "\n";
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 	char type;
 	while (true) {
 		cout << "Do you want to use this program? [y/n]" << endl;
@@ -102,8 +133,14 @@ int main()
 	myfilelogin.close();
 	
 	system("cls");
-
-	const string USERNAME = "Sierra";
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	for (int column = 0; column < 90; ++column)
+	{
+		cout << "*";
+	}
+	cout << "\n";
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+	const string USERNAME = "sierra";
 	const string PASSWORD = "716715";
 	string username, password;
 	cout << "Enter Username: ";
@@ -113,7 +150,7 @@ int main()
 	myfile1.open("user_bank.txt", ios::app);
 	myfile1 << username << endl;
 	myfile1.close();
-
+	/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 	if (username.length() < 0)
 	{
@@ -139,6 +176,7 @@ int main()
 		{
 			if (username == USERNAME && password == PASSWORD)
 			{
+				system("cls");
 				cout << "Access Granted" << endl;
 				Sleep(1000);
 				system("cls");
@@ -164,46 +202,137 @@ int main()
 				Sleep(500);
 				printf(".\n");
 				system("cls");
-
-				cout << "Hello " << name << endl;
-				Sleep(500);
-
-				printf("Pulling Resources");
+				
+				cout << "Welcome " << name;
 				Sleep(1000);
-				printf(".");
-				Sleep(1000);
-				printf(".");
-				Sleep(500);
-				printf(".");
-				Sleep(500);
-				printf(".\n");
 				system("cls");
 
-				//login logic needed
-				printf("Loading Data");
-				Sleep(500);
-				printf(".");
-				Sleep(500);
-				printf(".");
-				Sleep(500);
-				printf(".");
-				Sleep(500);
-				printf(".\n");
+				string input,input1;
+				cout << "Would you like to check current values? [y/n]\n";
+				cin >> input;
+
+				if (input == "y") 
+				{
+					system("cls");
+					printf("Pulling Resources");
+					Sleep(1000);
+					printf(".");
+					Sleep(1000);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".\n");
+					system("cls");
+
+					//login logic needed
+					printf("Loading Data");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".\n");
+					system("cls");
+
+					//this can be where the data entry goes?
+
+					printf("Opening main data files");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".\n");
+
+					string line;
+					ifstream myfile("databank.txt");
+					if (myfile.is_open())
+					{
+						while (getline(myfile, line))
+						{
+							cout << line << '\n';
+						}
+						myfile.close();
+					}
+					else cout << "unable to open file error '001'\n";  //this code works, but i feel like it should not??? whats going on!!!!
+
+					string update;
+					cout << "would you like to go to the next option? [y/n]";
+					cin >> update;
+
+					if (update == "y")
+					{
+						cout << "\n";
+					}
+					else if (update == "n")
+					{
+						system("cls");
+						cout << "Thank you for using Lebank App\n";
+						exit(0);
+					}
+				}
+				else if(input=="n")
+				{
+					cout <<" \n";
+				
+				}
+
 				system("cls");
 
-				//this can be where the data entry goes?
+				cout << "Would you like to update current values? [y/n]\n";
+				cin >> input1;
 
-				printf("Opening main data files");
-				Sleep(500);
-				printf(".");
-				Sleep(500);
-				printf(".");
-				Sleep(500);
-				printf(".\n");
+				if (input1 == "y")
+				{
+					cout << " \n";
 
-				//this can be where the readstream go
-				//read save text file logic
-			
+					system("cls");
+
+					printf("Pulling Resources");
+					Sleep(1000);
+					printf(".");
+					Sleep(1000);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".\n");
+					system("cls");
+
+					//login logic needed
+					printf("Loading Data");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".\n");
+					system("cls");
+
+					//this can be where the data entry goes?
+
+					printf("Opening main data files");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".");
+					Sleep(500);
+					printf(".\n");
+
+					//this can be where the readstream go
+					//read save text file logic
+				}
+				else if (input1=="n")
+				{
+					cout << "Those were the only option\n Thank you for using LB\n";
+					exit(0);
+				}
+
 			}
 			else
 			{
