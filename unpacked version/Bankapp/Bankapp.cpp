@@ -1,4 +1,3 @@
-
 #include "stdafx.h"
 #include <iostream>
 #include <stdlib.h>
@@ -12,13 +11,9 @@
 #include <vector>
 #include <map>
 #include<fstream>
-
-
 using namespace std;
-
 int main()
 {
-
 	for (int column = 0; column < 90; ++column)
 	{
 		cout << "*";
@@ -77,7 +72,6 @@ int main()
 			exit(0);
 		}
 	}
-
 	system("cls");
 
 	printf("Executing");
@@ -122,7 +116,9 @@ int main()
 		if (name != "phillip")
 		{
 			cout << "Authentication Failed\n";
-			Sleep(1000);
+			Sleep(2000);
+			system("cls");
+			cout << "The program will now end\n";
 			exit(0);
 		}
 		else
@@ -260,7 +256,7 @@ int main()
 					else cout << "unable to open file error '001'\n";  //this code works, but i feel like it should not??? whats going on!!!!
 
 					string update;
-					cout << "would you like to go to the next option? [y/n]";
+					cout << "Would you like to go to the next option? [y/n]\n";
 					cin >> update;
 
 					if (update == "y")
@@ -269,7 +265,6 @@ int main()
 					}
 					else if (update == "n")
 					{
-						system("cls");
 						cout << "Thank you for using Lebank App\n";
 						exit(0);
 					}
@@ -279,9 +274,6 @@ int main()
 					cout <<" \n";
 				
 				}
-
-				system("cls");
-
 				cout << "Would you like to update current values? [y/n]\n";
 				cin >> input1;
 
@@ -324,12 +316,65 @@ int main()
 					Sleep(500);
 					printf(".\n");
 
+					system("cls");
+
+					string line1;
+					cout << "How many 1 dollar bills do you have?\n";
+					cin >> line1;
+
+					string line2;
+					cout << "How many 2 dollar bills do you have?\n";
+					cin >> line2;
+
+					string line3;
+					cout << "How many 5 dollar bills do you have?\n";
+					cin >> line3;
+
+					string line4;
+					cout << "How many 10 dollar bills do you have?\n";
+					cin >> line4;
+
+					string line5;
+					cout << "How many 20 dollar bills do you have?\n";
+					cin >> line5;
+
+					string line6;
+					cout << "How many 50 dollar bills do you have?\n";
+					cin >> line6;
+
+					string line7;
+					cout << "How many 100 dollar bills do you have?\n";
+					cin >> line7;
+
+					ofstream myfile("databank.txt");
+					if (myfile.is_open())
+					{
+						myfile << "$1:" << line1<<"\n";
+						myfile << "$2:" << line2<<"\n";
+						myfile << "$5:" <<line3<<"\n";
+						myfile << "$10:"<<line4<<"\n";
+						myfile << "$20:"<<line5<<"\n";
+						myfile << "$50:"<<line6<<"\n";
+						myfile << "$100:"<<line7<<"\n";
+						myfile.close();
+						cout << "The values have been updated\n";
+						cout << "Thank you for using LB\n";
+						Sleep(2000);
+						cout << "The program will now end\n";
+						return 0;
+					}
+					else cout << "Unable to open file";
+
 					//this can be where the readstream go
 					//read save text file logic
 				}
 				else if (input1=="n")
 				{
-					cout << "Those were the only option\n Thank you for using LB\n";
+					system("cls");
+					cout << "Those were the only option\nThank you for using LB\n";
+					Sleep(2000);
+					system("cls");
+					cout << "The program will now end\n";
 					exit(0);
 				}
 
